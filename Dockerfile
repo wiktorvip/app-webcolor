@@ -1,4 +1,4 @@
-FROM python:3.10-alpine
+FROM python:3.12-alpine
 
 RUN pip install --upgrade pip
 RUN pip install flask
