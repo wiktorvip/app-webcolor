@@ -83,7 +83,7 @@ jobs:
       id: imagescan
       with:
         image: "${{env.DOCKER_USERNAME}}/${{env.GH_REPONAME}}:latest"
-        acs-report-enable: "true"
+        #acs-report-enable: "true"
         fail-build: false
 
     - name: upload Anchore Image scan SARIF report
