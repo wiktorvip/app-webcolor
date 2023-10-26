@@ -80,6 +80,7 @@ jobs:
           
     - name: Scan image
       uses: anchore/scan-action@v3
+      id: imagescan
       with:
         image: "${{env.DOCKER_USERNAME}}/${{env.GH_REPONAME}}:latest"
         acs-report-enable: "true"
@@ -89,3 +90,4 @@ jobs:
       uses: github/codeql-action/upload-sarif@v2
       with:
         sarif_file: ${{ steps.imagescan.outputs.sarif }}
+
