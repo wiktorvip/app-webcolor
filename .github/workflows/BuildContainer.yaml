@@ -79,7 +79,7 @@ jobs:
           --tag ghcr.io/${{env.GH_REPO}}:${{env.APP_VERSION}} \
           ${{env.GH_REPO}}:latest
           
-    - name: Scan image
+    - name: "Vulnerability scan container image with Grype"
       uses: anchore/scan-action@v3
       id: imagescan
       with:
@@ -87,8 +87,20 @@ jobs:
         acs-report-enable: "true"
         fail-build: false
 
-    - name: upload Anchore Image scan SARIF report
+    - name: "Upload Anchore Image scan SARIF report"
       uses: github/codeql-action/upload-sarif@v2
       with:
         sarif_file: ${{ steps.imagescan.outputs.sarif }}
 
+    - name: "Vulnerability scan container image with Trivy"
+      uses: aquasecurity/trivy-action@master
+      with:
+        image-ref: "${{env.DOCKER_USERNAME}}/${{env.GH_REPONAME}}:latest"
+        format: 'sarif'
+        output: 'trivy-results.sarif'
+        severity: 'CRITICAL,HIGH'
+
+    - name: "Upload Trivy scan results to GitHub Security tab"
+      uses: github/codeql-action/upload-sarif@v2
+      with:
+        sarif_file: 'trivy-results.sarif'
