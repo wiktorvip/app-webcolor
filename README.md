@@ -11,6 +11,7 @@ Supported colors/tags:
 * v5 - yellow
 * v6 - orange
 * v7 - darkblue
+* v8 - dark
 
 ### Deploy:
 ```

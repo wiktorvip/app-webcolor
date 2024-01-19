@@ -41,7 +41,7 @@ jobs:
 
     - name: Set ENV APP_COLOR if not present at Dockerfile
       if: ${{ env.APP_COLOR == '' }}
-      run: echo "APP_COLOR=darkblue" >> ${GITHUB_ENV}
+      run: echo "APP_COLOR=dark" >> ${GITHUB_ENV}
 
     - name: Set ENV APP_VERSION
       if: steps.check_files.outputs.files_exists == 'true'
@@ -50,7 +50,7 @@ jobs:
 
     - name: Set ENV APP_VERSION if not present at Dockerfile
       if: ${{ env.APP_VERSION == '' }}
-      run: echo "APP_VERSION=v7" >> ${GITHUB_ENV}
+      run: echo "APP_VERSION=v8" >> ${GITHUB_ENV}
 
     # - name: Set varable APP_VERSION from file APP_VERSION if exist
     #   if: ${{ hashFiles('APP_VERSION') != '' }}

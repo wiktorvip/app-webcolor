@@ -14,7 +14,8 @@ color_codes = {
     "pink": "#be2edd",      # v4
     "yellow": "#ffff00",    # v5
     "orange": "#ffa500",    # v6
-    "darkblue": "#30336b"   # v7
+    "darkblue": "#30336b",  # v7
+    "dark": "#000000"       # v7
 }
 
 SUPPORTED_COLORS = ",".join(color_codes.keys())
