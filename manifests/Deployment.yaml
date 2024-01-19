@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: app-webcolor
+  name: app-webcolor
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: app-webcolor
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: app-webcolor
+    spec:
+      containers:
+      - image: ghcr.io/wiktorvip/app-webcolor
+        #args: ["--color", "green"]
+        name: app-webcolor
+        ports:
+          - containerPort: 9000
+        # envFrom:
+        #   - configMapRef:
+        #       name: app-webcolor
