@@ -5,8 +5,8 @@
 
 Supported colors/tags:
 * v1 - blue
-* v2 - red
-* v3 - green
+* v2 - green
+* v3 - red
 * v4 - pink
 * v5 - yellow
 * v6 - orange

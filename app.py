@@ -9,8 +9,8 @@ app = Flask(__name__)
 
 color_codes = {
     "blue": "#2980b9",      # v1
-    "red": "#e74c3c",       # v2
-    "green": "#16a085",     # v3
+    "green": "#16a085",     # v2
+    "red": "#e74c3c",       # v3
     "pink": "#be2edd",      # v4
     "yellow": "#ffff00",    # v5
     "orange": "#ffa500",    # v6
@@ -28,7 +28,7 @@ COLOR_FROM_ENV = os.environ.get('APP_COLOR')
 VERSION_FROM_ENV = os.environ.get('APP_VERSION') or "v1"
 
 # Generate a random color
-COLOR = random.choice(["red", "green", "blue", "darkblue", "pink", "yellow", "orange"])
+COLOR = random.choice(["red", "green", "blue", "darkblue", "pink", "yellow", "dark", "orange"])
 
 
 @app.route("/")

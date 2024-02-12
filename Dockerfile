@@ -10,8 +10,8 @@ RUN pip install -r requirements.txt
 
 EXPOSE 9000
 
-ENV APP_COLOR=dark
-ENV APP_VERSION=v8
+ENV APP_COLOR=blue
+ENV APP_VERSION=v1
 
 ENTRYPOINT ["python", "app.py"]
 #CMD ["--color", "red"]
