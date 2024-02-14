@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{ .Values.app-webcolor.config.name }}
+  name: {{ .Values.appwebcolor.config.name }}
   labels:
-    app: {{ .Values.app-webcolor.name }}
+    app: {{ .Values.appwebcolor.name }}
 data: 
-{{- range .Values.app-webcolor.config.data }}
+{{- range .Values.appwebcolor.config.data }}
   {{ .key }}: {{ .value }}
 {{- end}}

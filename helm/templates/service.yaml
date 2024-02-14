@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ .Values.app-webcolor.name }}
-  labels: 
-    app: {{ .Values.app-webcolor.name }}
+  name: {{ .Values.appwebcolor.name }}
+  labels:
+    app: {{ .Values.appwebcolor.name }}
 spec:
-  type: {{ .Values.app-webcolor.service.type }}
-  selector:             
-    app: {{ .Values.app-webcolor.name }}
+  type: {{ .Values.appwebcolor.service.type }}
+  selector:
+    app: {{ .Values.appwebcolor.name }}
   ports:
-    - port: {{ .Values.app-webcolor.service.port }}       
-      targetPort: {{ .Values.app-webcolor.container.port }}
+    - port: {{ .Values.appwebcolor.service.port }}
+      targetPort: {{ .Values.appwebcolor.container.port }}
