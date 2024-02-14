@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: {{ .Values.app-webcolor.name }}
+  name: {{ .Values.app-webcolor.name }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ .Values.app-webcolor.name }}
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.app-webcolor.name }}
+    spec:
+      containers:
+      - image: {{ .Values.app-webcolor.container.image }}  
+        name: {{ .Values.app-webcolor.name }}
+        ports:
+          - containerPort: {{ .Values.app-webcolor.container.port }}
+        envFrom:
+          - configMapRef:
+            name: {{ .Values.app-webcolor.config.name }}
