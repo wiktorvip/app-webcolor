@@ -5,7 +5,7 @@ metadata:
     app: app-webcolor
   name: app-webcolor
 spec:
-  replicas: 2
+  replicas: 4
   selector:
     matchLabels:
       app: app-webcolor
@@ -16,7 +16,7 @@ spec:
         app: app-webcolor
     spec:
       containers:
-      - image: ghcr.io/wiktorvip/app-webcolor:v1
+      - image: ghcr.io/wiktorvip/app-webcolor:v5
         #args: ["--color", "green"]
         name: app-webcolor
         ports:
