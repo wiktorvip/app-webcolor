@@ -3,6 +3,16 @@ entries:
   app-webcolor:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2024-02-16T11:30:55.465131204Z"
+    description: A Helm chart for app-webcolor
+    digest: 15068612b70ff9cec0adea6fc8853e1a3ff7f246233a99872d740d8d08df8049
+    name: app-webcolor
+    type: application
+    urls:
+    - https://github.com/wiktorvip/app-webcolor/releases/download/app-webcolor-0.1.4/app-webcolor-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2024-02-16T11:27:36.82195296Z"
     description: A Helm chart for app-webcolor
     digest: 2069d9e6444183d3c587b80535bdf38a0d0bfa31dd4a682227c656f0640f02da
@@ -21,4 +31,4 @@ entries:
     urls:
     - https://github.com/wiktorvip/app-webcolor/releases/download/app-webcolor-0.1.2/app-webcolor-0.1.2.tgz
     version: 0.1.2
-generated: "2024-02-16T11:27:36.821960574Z"
+generated: "2024-02-16T11:30:55.465145812Z"
