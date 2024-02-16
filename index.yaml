@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  app-webcolor:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-02-16T11:09:50.704487228Z"
+    description: A Helm chart for app-webcolor
+    digest: fc43205ca55cf8c4d139d429a9eb1ff52668ed5581c5e130ec5b0e6e175a02ee
+    name: app-webcolor
+    type: application
+    urls:
+    - https://github.com/wiktorvip/app-webcolor/releases/download/app-webcolor-0.1.2/app-webcolor-0.1.2.tgz
+    version: 0.1.2
+generated: "2024-02-16T11:09:50.704494983Z"
