@@ -18,3 +18,11 @@ Supported colors/tags:
 kubectl apply -f https://raw.githubusercontent.com/wiktorvip/app-webcolor/main/manifests/Deployment.yaml
 kubectl apply -f https://raw.githubusercontent.com/wiktorvip/app-webcolor/main/manifests/Service.yaml
 ```
+
+### Helm 
+```
+helm repo add app-webcolor https://wiktorvip.github.io/app-webcolor
+helm repo update
+helm search repo helm-charts
+helm install app-webcolor app-webcolor/app-webcolor
+```

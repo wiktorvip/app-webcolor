@@ -19,7 +19,7 @@ spec:
       - image: {{ .Values.appwebcolor.container.image }}  
         name: {{ .Values.appwebcolor.name }}
         ports:
-          - containerPort: {{ .Values.appwebcolor.container.port }}
+        - containerPort: {{ .Values.appwebcolor.container.port }}
         envFrom:
-          - configMapRef:
-            name: {{ .Values.appwebcolor.config.name }}
+        - configMapRef:
+          name: {{ .Values.appwebcolor.config.name }}
