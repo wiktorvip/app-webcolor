@@ -1,0 +1,16 @@
+replicaCount: 2
+
+appwebcolor:
+  name: app-webcolor
+  container:
+    image: ghcr.io/wiktorvip/app-webcolor:v1
+    port: 9000
+  service:
+    type: ClusterIP
+    port: 9000
+  config:
+    name: app-webcolor-config
+    data:
+       - key: APP_COLOR
+         value: blue
+
